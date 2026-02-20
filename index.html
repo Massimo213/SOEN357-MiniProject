@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedCompanion — UX/UI Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Med<span>Companion</span></a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#personas">Personas</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#usability">Usability</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="hero">
+  <div class="hero-content">
+    <p class="hero-tag">SOEN 357 — UX/UI Case Study</p>
+    <h1>MedCompanion</h1>
+    <p class="hero-subtitle">A Health Companion Super App for Chronic Condition Management</p>
+    <div class="hero-meta">
+      <span>Yahya Mounadi</span>
+      <span class="dot"></span>
+      <span>February 2026</span>
+    </div>
+    <a href="#overview" class="btn-primary">Explore the Case Study</a>
+  </div>
+  <div class="hero-visual">
+    <div class="phone-mockup">
+      <div class="phone-screen">
+        <div class="mock-status-bar">
+          <span>9:41</span>
+          <span>●●●</span>
+        </div>
+        <div class="mock-greeting">Good Morning, Sarah</div>
+        <div class="mock-card">
+          <div class="mock-pill"></div>
+          <div>
+            <div class="mock-label">Metformin 500mg</div>
+            <div class="mock-time">8:00 AM — Take with food</div>
+          </div>
+          <div class="mock-check">✓</div>
+        </div>
+        <div class="mock-card">
+          <div class="mock-pill blue"></div>
+          <div>
+            <div class="mock-label">Lisinopril 10mg</div>
+            <div class="mock-time">8:00 AM — 1 tablet</div>
+          </div>
+          <div class="mock-check pending">○</div>
+        </div>
+        <div class="mock-card appointment">
+          <div class="mock-cal">📅</div>
+          <div>
+            <div class="mock-label">Dr. Chen — Cardiology</div>
+            <div class="mock-time">Today, 2:30 PM</div>
+          </div>
+          <div class="mock-arrow">→</div>
+        </div>
+        <div class="mock-nav-bar">
+          <span>🏠</span><span>💊</span><span>📅</span><span>💬</span><span>👤</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview" class="section">
+  <div class="container">
+    <div class="section-label">01</div>
+    <h2>Project Overview</h2>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <h3>The Problem</h3>
+        <p>Over <strong>60% of adults</strong> with chronic conditions struggle with medication adherence, missed appointments, and fragmented communication with healthcare providers. Existing apps address single needs — reminders OR scheduling OR messaging — but no unified experience exists that ties these together into a coherent health companion.</p>
+      </div>
+      <div class="overview-card">
+        <h3>The Goal</h3>
+        <p>Design a mobile app that serves as a <strong>single hub</strong> for medication management, appointment scheduling, and provider communication — specifically for individuals managing chronic conditions like diabetes, hypertension, and heart disease.</p>
+      </div>
+      <div class="overview-card">
+        <h3>My Role</h3>
+        <p>Sole UX/UI Designer — responsible for user research, persona creation, journey mapping, wireframing, prototyping, and usability testing planning.</p>
+      </div>
+      <div class="overview-card">
+        <h3>Tools Used</h3>
+        <div class="tool-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Google Forms</span>
+          <span class="tag">Miro</span>
+          <span class="tag">Maze</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="section alt-bg">
+  <div class="container">
+    <div class="section-label">02</div>
+    <h2>User Research</h2>
+    <p class="section-intro">Understanding the real needs behind chronic condition management required a multi-method research approach combining primary and secondary sources.</p>
+
+    <div class="research-methods">
+      <div class="method-card">
+        <div class="method-icon">🎙️</div>
+        <h3>Semi-Structured Interviews</h3>
+        <p><strong>6 participants</strong> (ages 28–67) managing chronic conditions (Type 2 diabetes, hypertension, asthma). Interviews lasted 30–45 minutes via Zoom, focusing on daily medication routines, challenges with scheduling, and experiences with existing health apps.</p>
+        <div class="method-insight">
+          <strong>Key Finding:</strong> 5 out of 6 participants reported using 3+ separate apps/tools to manage their health, leading to "app fatigue" and missed doses.
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">📋</div>
+        <h3>Online Survey</h3>
+        <p><strong>47 respondents</strong> recruited via health-related Reddit communities and Facebook groups. The survey covered medication adherence habits, appointment management methods, and desired app features.</p>
+        <div class="method-insight">
+          <strong>Key Finding:</strong> 72% said they would use one unified app if it combined reminders, scheduling, and messaging. 68% cited "forgetting to take medication" as their #1 challenge.
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">📚</div>
+        <h3>Secondary Research</h3>
+        <p>Review of published studies on medication adherence (WHO, 2023), competitive analysis of Medisafe, MyTherapy, and CareZone, and accessibility guidelines (WCAG 2.1 AA, Apple HIG).</p>
+        <div class="method-insight">
+          <strong>Key Finding:</strong> WHO reports that medication adherence in developed countries averages only 50%. The most successful apps use contextual reminders (not just alarms) and social accountability features.
+        </div>
+      </div>
+    </div>
+
+    <div class="research-synthesis">
+      <h3>Research Synthesis — Key Themes</h3>
+      <div class="themes-grid">
+        <div class="theme">
+          <div class="theme-num">1</div>
+          <h4>Fragmentation</h4>
+          <p>Users juggle multiple tools — paper, phone alarms, separate apps — with no single source of truth.</p>
+        </div>
+        <div class="theme">
+          <div class="theme-num">2</div>
+          <h4>Cognitive Load</h4>
+          <p>Complex medication schedules (3–7 daily meds) overwhelm users, especially elderly patients.</p>
+        </div>
+        <div class="theme">
+          <div class="theme-num">3</div>
+          <h4>Communication Gaps</h4>
+          <p>Patients want to reach providers quickly for non-emergency questions but feel blocked by phone trees and portals.</p>
+        </div>
+        <div class="theme">
+          <div class="theme-num">4</div>
+          <h4>Emotional Burden</h4>
+          <p>Managing chronic conditions daily creates anxiety and guilt — apps should reduce stress, not add to it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERSONAS ============ -->
+<section id="personas" class="section">
+  <div class="container">
+    <div class="section-label">03</div>
+    <h2>User Personas</h2>
+    <p class="section-intro">Based on interview and survey data, two primary personas were developed to represent the core user segments.</p>
+
+    <div class="persona-grid">
+      <!-- Persona 1 -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar">
+            <div class="avatar-placeholder">SM</div>
+          </div>
+          <div>
+            <h3>Sarah Mitchell</h3>
+            <p class="persona-demo">62 years old · Retired Teacher · Lives alone in Montreal</p>
+          </div>
+        </div>
+        <div class="persona-body">
+          <div class="persona-section">
+            <h4>Background</h4>
+            <p>Sarah was diagnosed with Type 2 diabetes 8 years ago and hypertension 3 years ago. She takes 4 daily medications at different times. Her daughter helps manage appointments but lives in another city.</p>
+          </div>
+          <div class="persona-section">
+            <h4>Goals</h4>
+            <ul>
+              <li>Never miss a medication dose</li>
+              <li>Keep track of all upcoming doctor visits in one place</li>
+              <li>Quickly message her doctor about side effects without calling the clinic</li>
+              <li>Share health updates with her daughter</li>
+            </ul>
+          </div>
+          <div class="persona-section">
+            <h4>Pain Points</h4>
+            <ul class="pain-points">
+              <li>Forgets evening medications when her routine changes</li>
+              <li>Finds most health apps too small to read and confusing to navigate</li>
+              <li>Has to call the clinic and wait on hold for simple questions</li>
+              <li>Feels anxious about managing everything alone</li>
+            </ul>
+          </div>
+          <div class="persona-section">
+            <h4>Tech Comfort</h4>
+            <div class="tech-bar">
+              <div class="tech-fill" style="width: 40%;">Low–Medium</div>
+            </div>
+            <p>Uses iPhone for calls, texts, and basic apps. Needs large text and clear navigation.</p>
+          </div>
+          <div class="persona-quote">"I just want one app that tells me what to take, when, and lets me reach my doctor without the runaround."</div>
+        </div>
+      </div>
+
+      <!-- Persona 2 -->
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar">
+            <div class="avatar-placeholder blue">JR</div>
+          </div>
+          <div>
+            <h3>James Reyes</h3>
+            <p class="persona-demo">34 years old · Software Developer · Lives in Toronto</p>
+          </div>
+        </div>
+        <div class="persona-body">
+          <div class="persona-section">
+            <h4>Background</h4>
+            <p>James was diagnosed with Crohn's disease at 26. He takes 2 daily medications and a biweekly injection. He works long hours and often forgets doses during busy sprints. His gastroenterologist is at a hospital 40 minutes away.</p>
+          </div>
+          <div class="persona-section">
+            <h4>Goals</h4>
+            <ul>
+              <li>Smart reminders that adapt to his irregular schedule</li>
+              <li>Track medication history and share reports with his specialist</li>
+              <li>Book and reschedule appointments without phone calls</li>
+              <li>Log symptoms alongside medication intake for pattern detection</li>
+            </ul>
+          </div>
+          <div class="persona-section">
+            <h4>Pain Points</h4>
+            <ul class="pain-points">
+              <li>Alarm-based reminders get dismissed during meetings and forgotten</li>
+              <li>No way to correlate symptoms with medication timing</li>
+              <li>Hospital booking system is a clunky web portal from 2010</li>
+              <li>Feels disconnected from his care team between visits</li>
+            </ul>
+          </div>
+          <div class="persona-section">
+            <h4>Tech Comfort</h4>
+            <div class="tech-bar">
+              <div class="tech-fill high" style="width: 90%;">High</div>
+            </div>
+            <p>Power user. Expects modern, fast, well-designed apps with integrations.</p>
+          </div>
+          <div class="persona-quote">"I don't need another alarm clock. I need a system that understands my schedule and actually helps me stay on track."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USER JOURNEY MAP ============ -->
+<section id="journey" class="section alt-bg">
+  <div class="container">
+    <div class="section-label">04</div>
+    <h2>User Journey Map</h2>
+    <p class="section-intro">Mapping Sarah's journey through a typical day using MedCompanion — from waking up to her evening routine.</p>
+
+    <div class="journey-map">
+      <!-- Stage 1 -->
+      <div class="journey-stage">
+        <div class="journey-phase">Morning Wake-Up</div>
+        <div class="journey-time">7:00 AM</div>
+        <div class="journey-action">
+          <h4>Action</h4>
+          <p>Sarah opens MedCompanion and sees her morning dashboard with today's medications and a reminder about her afternoon appointment.</p>
+        </div>
+        <div class="journey-touchpoint">
+          <h4>Touchpoint</h4>
+          <p>Home screen dashboard, push notification</p>
+        </div>
+        <div class="journey-emotion positive">
+          <h4>Emotion</h4>
+          <p>😊 Reassured — everything is in one place</p>
+        </div>
+        <div class="journey-opportunity">
+          <h4>Design Opportunity</h4>
+          <p>Personalized greeting + clear visual hierarchy of urgent items</p>
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="journey-stage">
+        <div class="journey-phase">Morning Medication</div>
+        <div class="journey-time">8:00 AM</div>
+        <div class="journey-action">
+          <h4>Action</h4>
+          <p>Takes Metformin and Lisinopril. Taps "Mark as Taken" for each medication on the reminder screen.</p>
+        </div>
+        <div class="journey-touchpoint">
+          <h4>Touchpoint</h4>
+          <p>Medication reminder card, confirmation haptic</p>
+        </div>
+        <div class="journey-emotion positive">
+          <h4>Emotion</h4>
+          <p>😌 Satisfied — quick and easy to confirm</p>
+        </div>
+        <div class="journey-opportunity">
+          <h4>Design Opportunity</h4>
+          <p>One-tap confirmation with undo option; visual progress ring</p>
+        </div>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="journey-stage">
+        <div class="journey-phase">Mid-Day Check</div>
+        <div class="journey-time">12:30 PM</div>
+        <div class="journey-action">
+          <h4>Action</h4>
+          <p>Receives a notification: "Reminder: Dr. Chen appointment at 2:30 PM. Tap to view directions." Sarah reviews appointment details.</p>
+        </div>
+        <div class="journey-touchpoint">
+          <h4>Touchpoint</h4>
+          <p>Push notification, appointment detail screen</p>
+        </div>
+        <div class="journey-emotion neutral">
+          <h4>Emotion</h4>
+          <p>😐 Slightly anxious — nervous about appointment</p>
+        </div>
+        <div class="journey-opportunity">
+          <h4>Design Opportunity</h4>
+          <p>Show what to bring, pre-visit checklist, calming UI tone</p>
+        </div>
+      </div>
+
+      <!-- Stage 4 -->
+      <div class="journey-stage">
+        <div class="journey-phase">Post-Appointment</div>
+        <div class="journey-time">3:30 PM</div>
+        <div class="journey-action">
+          <h4>Action</h4>
+          <p>After her visit, Sarah wants to ask Dr. Chen about a new side effect. She opens the messaging feature and sends a quick text.</p>
+        </div>
+        <div class="journey-touchpoint">
+          <h4>Touchpoint</h4>
+          <p>In-app secure messaging</p>
+        </div>
+        <div class="journey-emotion positive">
+          <h4>Emotion</h4>
+          <p>😊 Relieved — no phone tree, direct message sent</p>
+        </div>
+        <div class="journey-opportunity">
+          <h4>Design Opportunity</h4>
+          <p>Attach photos of symptoms, expected response time indicator</p>
+        </div>
+      </div>
+
+      <!-- Stage 5 -->
+      <div class="journey-stage">
+        <div class="journey-phase">Evening Medication</div>
+        <div class="journey-time">8:00 PM</div>
+        <div class="journey-action">
+          <h4>Action</h4>
+          <p>Push notification: "Time for your evening Metformin." Sarah was watching TV and almost forgot. She taps the notification and confirms.</p>
+        </div>
+        <div class="journey-touchpoint">
+          <h4>Touchpoint</h4>
+          <p>Smart push notification with action button</p>
+        </div>
+        <div class="journey-emotion positive">
+          <h4>Emotion</h4>
+          <p>😅 Grateful — the reminder caught her just in time</p>
+        </div>
+        <div class="journey-opportunity">
+          <h4>Design Opportunity</h4>
+          <p>Escalating reminders if not confirmed; snooze option with auto-retry</p>
+        </div>
+      </div>
+
+      <!-- Stage 6 -->
+      <div class="journey-stage">
+        <div class="journey-phase">End of Day Review</div>
+        <div class="journey-time">9:30 PM</div>
+        <div class="journey-action">
+          <h4>Action</h4>
+          <p>Sarah checks her daily summary: all medications taken, appointment logged. She sees a streak counter: "12 days perfect adherence!"</p>
+        </div>
+        <div class="journey-touchpoint">
+          <h4>Touchpoint</h4>
+          <p>Daily summary screen, adherence streak</p>
+        </div>
+        <div class="journey-emotion positive">
+          <h4>Emotion</h4>
+          <p>😊 Proud — positive reinforcement loop</p>
+        </div>
+        <div class="journey-opportunity">
+          <h4>Design Opportunity</h4>
+          <p>Gamification: streaks, badges, share progress with family</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journey Emotion Curve -->
+    <div class="emotion-curve">
+      <h3>Emotional Curve Across the Journey</h3>
+      <div class="curve-visual">
+        <div class="curve-labels">
+          <span>Positive</span>
+          <span>Neutral</span>
+          <span>Negative</span>
+        </div>
+        <div class="curve-line">
+          <svg viewBox="0 0 800 200" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="curveGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#34d399" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,80 C100,40 150,50 250,60 C350,90 400,100 450,70 C500,40 600,30 700,50 C750,40 800,20 800,20" stroke="#34d399" stroke-width="3" fill="none"/>
+            <path d="M0,80 C100,40 150,50 250,60 C350,90 400,100 450,70 C500,40 600,30 700,50 C750,40 800,20 800,20 L800,200 L0,200 Z" fill="url(#curveGrad)"/>
+            <circle cx="0" cy="80" r="6" fill="#34d399"/>
+            <circle cx="180" cy="50" r="6" fill="#34d399"/>
+            <circle cx="350" cy="95" r="6" fill="#fbbf24"/>
+            <circle cx="500" cy="55" r="6" fill="#34d399"/>
+            <circle cx="650" cy="35" r="6" fill="#34d399"/>
+            <circle cx="800" cy="20" r="6" fill="#34d399"/>
+          </svg>
+        </div>
+        <div class="curve-stages">
+          <span>Wake-Up</span>
+          <span>AM Meds</span>
+          <span>Appt Reminder</span>
+          <span>Messaging</span>
+          <span>PM Meds</span>
+          <span>Review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WIREFRAMES ============ -->
+<section id="wireframes" class="section">
+  <div class="container">
+    <div class="section-label">05</div>
+    <h2>Wireframes & Design Iterations</h2>
+    <p class="section-intro">I progressed from rough sketches to low-fidelity wireframes, then to high-fidelity mockups. Each iteration was informed by user feedback and design principles.</p>
+
+    <!-- Iteration 1 - Sketches -->
+    <div class="iteration-block">
+      <div class="iteration-header">
+        <span class="iteration-badge">Iteration 1</span>
+        <h3>Initial Sketches</h3>
+      </div>
+      <p>Paper sketches explored different layout approaches for the home dashboard. The focus was on information hierarchy — what does a chronic condition patient need to see first thing?</p>
+      <div class="wireframe-row">
+        <div class="wireframe-card sketch">
+          <div class="wireframe-label">Sketch A — List View</div>
+          <div class="sketch-container">
+            <svg viewBox="0 0 300 520" class="sketch-svg">
+              <rect x="10" y="10" width="280" height="500" rx="20" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,3"/>
+              <rect x="30" y="30" width="240" height="25" rx="4" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <text x="50" y="48" font-size="11" fill="#888" font-family="Inter">Good Morning, Sarah</text>
+              <rect x="30" y="75" width="240" height="60" rx="8" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <circle cx="55" cy="105" r="12" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <line x1="75" y1="95" x2="200" y2="95" stroke="#ccc" stroke-width="1.5"/>
+              <line x1="75" y1="112" x2="170" y2="112" stroke="#ddd" stroke-width="1.5"/>
+              <rect x="30" y="150" width="240" height="60" rx="8" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <circle cx="55" cy="180" r="12" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <line x1="75" y1="170" x2="200" y2="170" stroke="#ccc" stroke-width="1.5"/>
+              <line x1="75" y1="187" x2="170" y2="187" stroke="#ddd" stroke-width="1.5"/>
+              <rect x="30" y="225" width="240" height="60" rx="8" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <circle cx="55" cy="255" r="12" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <line x1="75" y1="245" x2="200" y2="245" stroke="#ccc" stroke-width="1.5"/>
+              <line x1="75" y1="262" x2="170" y2="262" stroke="#ddd" stroke-width="1.5"/>
+              <line x1="30" y="310" x2="270" y2="310" stroke="#ddd" stroke-width="1"/>
+              <text x="30" y="335" font-size="11" fill="#888" font-family="Inter">Upcoming Appointments</text>
+              <rect x="30" y="350" width="240" height="55" rx="8" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <line x1="75" y1="370" x2="220" y2="370" stroke="#ccc" stroke-width="1.5"/>
+              <line x1="75" y1="387" x2="170" y2="387" stroke="#ddd" stroke-width="1.5"/>
+              <rect x="30" y="475" width="240" height="30" rx="15" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <circle cx="80" cy="490" r="5" fill="#ccc"/>
+              <circle cx="130" cy="490" r="5" fill="#ccc"/>
+              <circle cx="180" cy="490" r="5" fill="#ccc"/>
+              <circle cx="230" cy="490" r="5" fill="#ccc"/>
+            </svg>
+          </div>
+          <p class="sketch-note">Simple vertical list. Easy to scan but no visual weight on urgency.</p>
+        </div>
+        <div class="wireframe-card sketch">
+          <div class="wireframe-label">Sketch B — Card Dashboard (Selected)</div>
+          <div class="sketch-container">
+            <svg viewBox="0 0 300 520" class="sketch-svg">
+              <rect x="10" y="10" width="280" height="500" rx="20" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,3"/>
+              <rect x="30" y="30" width="240" height="25" rx="4" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <text x="50" y="48" font-size="11" fill="#888" font-family="Inter">Good Morning, Sarah</text>
+              <rect x="30" y="70" width="240" height="80" rx="12" fill="none" stroke="#666" stroke-width="2"/>
+              <text x="45" y="95" font-size="10" fill="#888" font-family="Inter">TODAY'S PROGRESS</text>
+              <rect x="45" y="105" width="130" height="8" rx="4" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <rect x="45" y="105" width="85" height="8" rx="4" fill="#bbb"/>
+              <text x="45" y="135" font-size="10" fill="#888" font-family="Inter">2 of 4 taken</text>
+              <text x="200" y="115" font-size="22" fill="#888" font-family="Inter">🏆</text>
+              <rect x="30" y="170" width="115" height="90" rx="10" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <text x="45" y="195" font-size="10" fill="#888" font-family="Inter">Next Dose</text>
+              <text x="45" y="215" font-size="12" fill="#666" font-family="Inter" font-weight="600">Metformin</text>
+              <text x="45" y="235" font-size="10" fill="#aaa" font-family="Inter">in 2 hours</text>
+              <rect x="155" y="170" width="115" height="90" rx="10" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <text x="170" y="195" font-size="10" fill="#888" font-family="Inter">Appointment</text>
+              <text x="170" y="215" font-size="12" fill="#666" font-family="Inter" font-weight="600">Dr. Chen</text>
+              <text x="170" y="235" font-size="10" fill="#aaa" font-family="Inter">2:30 PM</text>
+              <rect x="30" y="280" width="240" height="55" rx="10" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <text x="45" y="305" font-size="10" fill="#888" font-family="Inter">💬 Message from Dr. Chen</text>
+              <text x="45" y="322" font-size="10" fill="#aaa" font-family="Inter">Your blood work results are in...</text>
+              <rect x="30" y="350" width="240" height="55" rx="10" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <text x="45" y="375" font-size="10" fill="#888" font-family="Inter">📊 Weekly Adherence</text>
+              <rect x="45" y="385" width="20" height="10" rx="2" fill="#ccc"/>
+              <rect x="70" y="382" width="20" height="13" rx="2" fill="#ccc"/>
+              <rect x="95" y="378" width="20" height="17" rx="2" fill="#ccc"/>
+              <rect x="120" y="375" width="20" height="20" rx="2" fill="#ccc"/>
+              <rect x="145" y="380" width="20" height="15" rx="2" fill="#ccc"/>
+              <rect x="30" y="475" width="240" height="30" rx="15" fill="none" stroke="#aaa" stroke-width="1.5"/>
+              <circle cx="80" cy="490" r="5" fill="#ccc"/>
+              <circle cx="130" cy="490" r="5" fill="#ccc"/>
+              <circle cx="180" cy="490" r="5" fill="#ccc"/>
+              <circle cx="230" cy="490" r="5" fill="#ccc"/>
+            </svg>
+          </div>
+          <p class="sketch-note"><strong>Selected:</strong> Card-based layout groups info by context, supports at-a-glance scanning.</p>
+        </div>
+      </div>
+      <div class="iteration-decision">
+        <strong>Decision:</strong> Sketch B's card dashboard was selected because it groups information by urgency and context (next dose, next appointment, messages) — aligning with Sarah's need to see "what matters now" without scrolling through a long list.
+      </div>
+    </div>
+
+    <!-- Iteration 2 - Low-Fi Wireframes -->
+    <div class="iteration-block">
+      <div class="iteration-header">
+        <span class="iteration-badge">Iteration 2</span>
+        <h3>Low-Fidelity Wireframes</h3>
+      </div>
+      <p>Digital wireframes built in Figma. These establish layout, spacing, and interaction patterns before applying visual design.</p>
+      <div class="wireframe-row four-col">
+        <!-- Home Screen -->
+        <div class="wireframe-card lofi">
+          <div class="wireframe-label">Home Dashboard</div>
+          <div class="lofi-screen">
+            <div class="lofi-bar"></div>
+            <div class="lofi-greeting">Good Morning, Sarah</div>
+            <div class="lofi-progress-card">
+              <div class="lofi-progress-text">Today's Progress</div>
+              <div class="lofi-progress-bar"><div class="lofi-fill" style="width:50%"></div></div>
+              <div class="lofi-progress-sub">2 of 4 medications taken</div>
+            </div>
+            <div class="lofi-two-col">
+              <div class="lofi-mini-card">
+                <span class="lofi-icon">💊</span>
+                <div class="lofi-mini-title">Next Dose</div>
+                <div class="lofi-mini-sub">Metformin · 2h</div>
+              </div>
+              <div class="lofi-mini-card">
+                <span class="lofi-icon">📅</span>
+                <div class="lofi-mini-title">Appointment</div>
+                <div class="lofi-mini-sub">Dr. Chen · 2:30</div>
+              </div>
+            </div>
+            <div class="lofi-msg-card">
+              <span>💬</span>
+              <div>
+                <div class="lofi-mini-title">Dr. Chen</div>
+                <div class="lofi-mini-sub">Results are in...</div>
+              </div>
+            </div>
+            <div class="lofi-tab-bar">
+              <span>🏠</span><span>💊</span><span>📅</span><span>💬</span><span>👤</span>
+            </div>
+          </div>
+        </div>
+        <!-- Medication Screen -->
+        <div class="wireframe-card lofi">
+          <div class="wireframe-label">Medication Reminder</div>
+          <div class="lofi-screen">
+            <div class="lofi-bar"></div>
+            <div class="lofi-greeting">My Medications</div>
+            <div class="lofi-time-group">
+              <div class="lofi-time-label">Morning — 8:00 AM</div>
+              <div class="lofi-med-item">
+                <div class="lofi-pill"></div>
+                <div>
+                  <div class="lofi-mini-title">Metformin 500mg</div>
+                  <div class="lofi-mini-sub">Take with food</div>
+                </div>
+                <div class="lofi-check taken">✓</div>
+              </div>
+              <div class="lofi-med-item">
+                <div class="lofi-pill blue"></div>
+                <div>
+                  <div class="lofi-mini-title">Lisinopril 10mg</div>
+                  <div class="lofi-mini-sub">1 tablet</div>
+                </div>
+                <div class="lofi-check taken">✓</div>
+              </div>
+            </div>
+            <div class="lofi-time-group">
+              <div class="lofi-time-label">Afternoon — 2:00 PM</div>
+              <div class="lofi-med-item">
+                <div class="lofi-pill green"></div>
+                <div>
+                  <div class="lofi-mini-title">Glipizide 5mg</div>
+                  <div class="lofi-mini-sub">Before lunch</div>
+                </div>
+                <div class="lofi-check">○</div>
+              </div>
+            </div>
+            <div class="lofi-time-group">
+              <div class="lofi-time-label">Evening — 8:00 PM</div>
+              <div class="lofi-med-item">
+                <div class="lofi-pill"></div>
+                <div>
+                  <div class="lofi-mini-title">Metformin 500mg</div>
+                  <div class="lofi-mini-sub">Take with dinner</div>
+                </div>
+                <div class="lofi-check">○</div>
+              </div>
+            </div>
+            <div class="lofi-tab-bar">
+              <span>🏠</span><span class="active">💊</span><span>📅</span><span>💬</span><span>👤</span>
+            </div>
+          </div>
+        </div>
+        <!-- Appointments -->
+        <div class="wireframe-card lofi">
+          <div class="wireframe-label">Appointments</div>
+          <div class="lofi-screen">
+            <div class="lofi-bar"></div>
+            <div class="lofi-greeting">Appointments</div>
+            <div class="lofi-calendar-strip">
+              <span>Mon</span><span>Tue</span><span class="cal-active">Wed</span><span>Thu</span><span>Fri</span>
+            </div>
+            <div class="lofi-appt-card upcoming">
+              <div class="lofi-appt-badge">TODAY</div>
+              <div class="lofi-mini-title">Dr. Chen — Cardiology</div>
+              <div class="lofi-mini-sub">2:30 PM · Montreal Heart Inst.</div>
+              <div class="lofi-appt-actions">
+                <span class="lofi-btn">Directions</span>
+                <span class="lofi-btn">Reschedule</span>
+              </div>
+            </div>
+            <div class="lofi-appt-card">
+              <div class="lofi-appt-date">Mar 5</div>
+              <div class="lofi-mini-title">Dr. Patel — Endocrinology</div>
+              <div class="lofi-mini-sub">10:00 AM · MUHC</div>
+            </div>
+            <div class="lofi-appt-card">
+              <div class="lofi-appt-date">Mar 18</div>
+              <div class="lofi-mini-title">Lab Work — Blood Panel</div>
+              <div class="lofi-mini-sub">8:30 AM · Dynacare</div>
+            </div>
+            <button class="lofi-add-btn">+ Book Appointment</button>
+            <div class="lofi-tab-bar">
+              <span>🏠</span><span>💊</span><span class="active">📅</span><span>💬</span><span>👤</span>
+            </div>
+          </div>
+        </div>
+        <!-- Messaging -->
+        <div class="wireframe-card lofi">
+          <div class="wireframe-label">Provider Messaging</div>
+          <div class="lofi-screen">
+            <div class="lofi-bar"></div>
+            <div class="lofi-greeting">Messages</div>
+            <div class="lofi-chat-thread">
+              <div class="lofi-msg-bubble provider">
+                <div class="lofi-msg-name">Dr. Chen</div>
+                <div class="lofi-msg-text">Hi Sarah, your blood work came back. A1C is 7.1 — slight improvement. Let's discuss at your visit today.</div>
+                <div class="lofi-msg-time">10:23 AM</div>
+              </div>
+              <div class="lofi-msg-bubble user">
+                <div class="lofi-msg-text">Thank you! I also wanted to ask about the dizziness I've been feeling in the mornings.</div>
+                <div class="lofi-msg-time">10:45 AM</div>
+              </div>
+              <div class="lofi-msg-bubble provider">
+                <div class="lofi-msg-text">Could be related to Lisinopril. We'll review dosage today. Stay hydrated until then.</div>
+                <div class="lofi-msg-time">11:02 AM</div>
+              </div>
+            </div>
+            <div class="lofi-chat-input">
+              <div class="lofi-input-field">Type a message...</div>
+              <div class="lofi-send-btn">→</div>
+            </div>
+            <div class="lofi-tab-bar">
+              <span>🏠</span><span>💊</span><span>📅</span><span class="active">💬</span><span>👤</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Iteration 3 - High-Fi -->
+    <div class="iteration-block">
+      <div class="iteration-header">
+        <span class="iteration-badge">Iteration 3</span>
+        <h3>High-Fidelity Mockups</h3>
+      </div>
+      <p>Applying the visual design system: color palette, typography, and micro-interactions. The design prioritizes readability (large touch targets, high contrast) for elderly users while maintaining modern aesthetics for tech-savvy users.</p>
+
+      <div class="design-system">
+        <h4>Design System</h4>
+        <div class="ds-grid">
+          <div class="ds-item">
+            <h5>Color Palette</h5>
+            <div class="color-swatches">
+              <div class="swatch" style="background:#4F46E5;"><span>Primary<br>#4F46E5</span></div>
+              <div class="swatch" style="background:#10B981;"><span>Success<br>#10B981</span></div>
+              <div class="swatch" style="background:#F59E0B;"><span>Warning<br>#F59E0B</span></div>
+              <div class="swatch" style="background:#EF4444;"><span>Urgent<br>#EF4444</span></div>
+              <div class="swatch" style="background:#1E1B4B;"><span>Dark<br>#1E1B4B</span></div>
+              <div class="swatch light" style="background:#F8FAFC;"><span>Light<br>#F8FAFC</span></div>
+            </div>
+          </div>
+          <div class="ds-item">
+            <h5>Typography</h5>
+            <div class="type-samples">
+              <p style="font-size:24px;font-weight:700;">Heading — Inter Bold 24px</p>
+              <p style="font-size:18px;font-weight:600;">Subheading — Inter SemiBold 18px</p>
+              <p style="font-size:16px;font-weight:400;">Body — Inter Regular 16px</p>
+              <p style="font-size:14px;font-weight:400;color:#64748B;">Caption — Inter Regular 14px</p>
+            </div>
+          </div>
+          <div class="ds-item">
+            <h5>Accessibility</h5>
+            <ul>
+              <li>Minimum touch target: 44x44pt (Apple HIG)</li>
+              <li>Contrast ratio: 4.5:1 minimum (WCAG AA)</li>
+              <li>Dynamic type support for iOS</li>
+              <li>VoiceOver labels on all interactive elements</li>
+              <li>Haptic feedback on medication confirmation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="wireframe-row four-col hifi">
+        <div class="wireframe-card hifi-card">
+          <div class="wireframe-label">Home — High Fidelity</div>
+          <div class="hifi-screen">
+            <div class="hifi-status">
+              <span>9:41</span>
+              <span class="hifi-notch"></span>
+              <span>●●●</span>
+            </div>
+            <div class="hifi-content">
+              <div class="hifi-greeting">Good Morning, Sarah 👋</div>
+              <div class="hifi-sub">Wednesday, Feb 20</div>
+              <div class="hifi-progress-card">
+                <div class="hifi-progress-top">
+                  <span>Today's Medications</span>
+                  <span class="hifi-fraction">2/4</span>
+                </div>
+                <div class="hifi-progress-bar"><div class="hifi-fill" style="width:50%"></div></div>
+                <div class="hifi-streak">🔥 12 day streak</div>
+              </div>
+              <div class="hifi-cards-row">
+                <div class="hifi-mini next-dose">
+                  <div class="hifi-mini-icon">💊</div>
+                  <div class="hifi-mini-label">Next Dose</div>
+                  <div class="hifi-mini-value">Metformin</div>
+                  <div class="hifi-mini-sub">in 2 hours</div>
+                </div>
+                <div class="hifi-mini next-appt">
+                  <div class="hifi-mini-icon">🩺</div>
+                  <div class="hifi-mini-label">Appointment</div>
+                  <div class="hifi-mini-value">Dr. Chen</div>
+                  <div class="hifi-mini-sub">Today, 2:30 PM</div>
+                </div>
+              </div>
+              <div class="hifi-msg-preview">
+                <div class="hifi-msg-dot"></div>
+                <div>
+                  <div class="hifi-msg-from">Dr. Chen</div>
+                  <div class="hifi-msg-preview-text">Your blood work results are in…</div>
+                </div>
+                <div class="hifi-msg-time-sm">10:23 AM</div>
+              </div>
+            </div>
+            <div class="hifi-tab-bar">
+              <div class="hifi-tab active"><span>🏠</span><small>Home</small></div>
+              <div class="hifi-tab"><span>💊</span><small>Meds</small></div>
+              <div class="hifi-tab"><span>📅</span><small>Appts</small></div>
+              <div class="hifi-tab"><span>💬</span><small>Chat</small></div>
+              <div class="hifi-tab"><span>👤</span><small>Profile</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="wireframe-card hifi-card">
+          <div class="wireframe-label">Medications — High Fidelity</div>
+          <div class="hifi-screen">
+            <div class="hifi-status">
+              <span>9:41</span>
+              <span class="hifi-notch"></span>
+              <span>●●●</span>
+            </div>
+            <div class="hifi-content">
+              <div class="hifi-greeting">Medications</div>
+              <div class="hifi-sub">Today, Feb 20</div>
+              <div class="hifi-med-group">
+                <div class="hifi-med-time">Morning — 8:00 AM</div>
+                <div class="hifi-med-item done">
+                  <div class="hifi-med-pill"></div>
+                  <div class="hifi-med-info">
+                    <div class="hifi-med-name">Metformin 500mg</div>
+                    <div class="hifi-med-inst">Take with food</div>
+                  </div>
+                  <div class="hifi-med-check done">✓</div>
+                </div>
+                <div class="hifi-med-item done">
+                  <div class="hifi-med-pill blue"></div>
+                  <div class="hifi-med-info">
+                    <div class="hifi-med-name">Lisinopril 10mg</div>
+                    <div class="hifi-med-inst">1 tablet</div>
+                  </div>
+                  <div class="hifi-med-check done">✓</div>
+                </div>
+              </div>
+              <div class="hifi-med-group">
+                <div class="hifi-med-time">Afternoon — 2:00 PM</div>
+                <div class="hifi-med-item">
+                  <div class="hifi-med-pill green"></div>
+                  <div class="hifi-med-info">
+                    <div class="hifi-med-name">Glipizide 5mg</div>
+                    <div class="hifi-med-inst">Before lunch</div>
+                  </div>
+                  <div class="hifi-med-check">○</div>
+                </div>
+              </div>
+              <div class="hifi-med-group">
+                <div class="hifi-med-time">Evening — 8:00 PM</div>
+                <div class="hifi-med-item">
+                  <div class="hifi-med-pill"></div>
+                  <div class="hifi-med-info">
+                    <div class="hifi-med-name">Metformin 500mg</div>
+                    <div class="hifi-med-inst">Take with dinner</div>
+                  </div>
+                  <div class="hifi-med-check">○</div>
+                </div>
+              </div>
+            </div>
+            <div class="hifi-tab-bar">
+              <div class="hifi-tab"><span>🏠</span><small>Home</small></div>
+              <div class="hifi-tab active"><span>💊</span><small>Meds</small></div>
+              <div class="hifi-tab"><span>📅</span><small>Appts</small></div>
+              <div class="hifi-tab"><span>💬</span><small>Chat</small></div>
+              <div class="hifi-tab"><span>👤</span><small>Profile</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="wireframe-card hifi-card">
+          <div class="wireframe-label">Appointments — High Fidelity</div>
+          <div class="hifi-screen">
+            <div class="hifi-status">
+              <span>9:41</span>
+              <span class="hifi-notch"></span>
+              <span>●●●</span>
+            </div>
+            <div class="hifi-content">
+              <div class="hifi-greeting">Appointments</div>
+              <div class="hifi-cal-strip">
+                <div class="hifi-cal-day"><small>Mon</small><span>18</span></div>
+                <div class="hifi-cal-day"><small>Tue</small><span>19</span></div>
+                <div class="hifi-cal-day active"><small>Wed</small><span>20</span></div>
+                <div class="hifi-cal-day"><small>Thu</small><span>21</span></div>
+                <div class="hifi-cal-day"><small>Fri</small><span>22</span></div>
+              </div>
+              <div class="hifi-appt today">
+                <div class="hifi-appt-tag">TODAY</div>
+                <div class="hifi-appt-title">Dr. Chen — Cardiology</div>
+                <div class="hifi-appt-detail">2:30 PM · Montreal Heart Inst.</div>
+                <div class="hifi-appt-btns">
+                  <span class="hifi-appt-btn">📍 Directions</span>
+                  <span class="hifi-appt-btn">🔄 Reschedule</span>
+                </div>
+              </div>
+              <div class="hifi-appt">
+                <div class="hifi-appt-date-badge">Mar 5</div>
+                <div class="hifi-appt-title">Dr. Patel — Endocrinology</div>
+                <div class="hifi-appt-detail">10:00 AM · MUHC</div>
+              </div>
+              <div class="hifi-appt">
+                <div class="hifi-appt-date-badge">Mar 18</div>
+                <div class="hifi-appt-title">Lab Work — Blood Panel</div>
+                <div class="hifi-appt-detail">8:30 AM · Dynacare</div>
+              </div>
+              <button class="hifi-book-btn">+ Book New Appointment</button>
+            </div>
+            <div class="hifi-tab-bar">
+              <div class="hifi-tab"><span>🏠</span><small>Home</small></div>
+              <div class="hifi-tab"><span>💊</span><small>Meds</small></div>
+              <div class="hifi-tab active"><span>📅</span><small>Appts</small></div>
+              <div class="hifi-tab"><span>💬</span><small>Chat</small></div>
+              <div class="hifi-tab"><span>👤</span><small>Profile</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="wireframe-card hifi-card">
+          <div class="wireframe-label">Chat — High Fidelity</div>
+          <div class="hifi-screen">
+            <div class="hifi-status">
+              <span>9:41</span>
+              <span class="hifi-notch"></span>
+              <span>●●●</span>
+            </div>
+            <div class="hifi-content chat-content">
+              <div class="hifi-chat-header">
+                <span class="hifi-back">←</span>
+                <div>
+                  <div class="hifi-chat-name">Dr. Chen</div>
+                  <div class="hifi-chat-status">Online · Replies within 2h</div>
+                </div>
+              </div>
+              <div class="hifi-chat-messages">
+                <div class="hifi-bubble provider">
+                  <p>Hi Sarah, your blood work came back. A1C is 7.1 — slight improvement!</p>
+                  <span class="hifi-bubble-time">10:23 AM</span>
+                </div>
+                <div class="hifi-bubble user">
+                  <p>Thank you! I also wanted to ask about the dizziness I've been feeling.</p>
+                  <span class="hifi-bubble-time">10:45 AM</span>
+                </div>
+                <div class="hifi-bubble provider">
+                  <p>Could be related to Lisinopril. We'll review dosage today. Stay hydrated.</p>
+                  <span class="hifi-bubble-time">11:02 AM</span>
+                </div>
+              </div>
+              <div class="hifi-chat-input">
+                <span class="hifi-attach">📎</span>
+                <input type="text" placeholder="Type a message..." disabled />
+                <span class="hifi-send">↑</span>
+              </div>
+            </div>
+            <div class="hifi-tab-bar">
+              <div class="hifi-tab"><span>🏠</span><small>Home</small></div>
+              <div class="hifi-tab"><span>💊</span><small>Meds</small></div>
+              <div class="hifi-tab"><span>📅</span><small>Appts</small></div>
+              <div class="hifi-tab active"><span>💬</span><small>Chat</small></div>
+              <div class="hifi-tab"><span>👤</span><small>Profile</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROTOTYPE ============ -->
+<section id="prototype" class="section alt-bg">
+  <div class="container">
+    <div class="section-label">06</div>
+    <h2>Interactive Prototype</h2>
+    <p class="section-intro">The clickable prototype demonstrates the core user flows: morning medication check-in, appointment review, and provider messaging.</p>
+
+    <div class="prototype-embed">
+      <div class="proto-note">
+        <p><strong>Note:</strong> The embedded prototype below is a visual demonstration of the main user flows. In a production scenario, this would be a fully interactive Figma prototype. The high-fidelity mockups above represent the key screens that would be linked together in the prototype.</p>
+      </div>
+
+      <div class="proto-flow">
+        <h3>Core User Flows</h3>
+        <div class="flow-diagram">
+          <div class="flow-step">
+            <div class="flow-node">Open App</div>
+            <div class="flow-arrow">→</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-node">Home Dashboard</div>
+            <div class="flow-branches">
+              <div class="flow-branch">
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Tap "Next Dose"</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Medications List</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Mark as Taken</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small end">Confirmation + Streak Update</div>
+              </div>
+              <div class="flow-branch">
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Tap "Appointment"</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Appointment Details</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Directions / Reschedule</div>
+              </div>
+              <div class="flow-branch">
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Tap Message</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Chat with Provider</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-node small">Send / Attach Photo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proto-screens">
+        <h3>Prototype Screen Flow</h3>
+        <div class="screen-flow">
+          <div class="screen-thumb">
+            <div class="thumb-label">1. Splash</div>
+            <div class="thumb-box">
+              <div class="thumb-content splash">
+                <div class="splash-logo">Med<span>Companion</span></div>
+                <div class="splash-tagline">Your health, simplified.</div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-connector">→</div>
+          <div class="screen-thumb">
+            <div class="thumb-label">2. Home</div>
+            <div class="thumb-box">
+              <div class="thumb-content home-thumb">
+                <div class="tt-bar"></div>
+                <div class="tt-card"></div>
+                <div class="tt-row"><div class="tt-sq"></div><div class="tt-sq"></div></div>
+                <div class="tt-line"></div>
+                <div class="tt-nav"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-connector">→</div>
+          <div class="screen-thumb">
+            <div class="thumb-label">3. Medications</div>
+            <div class="thumb-box">
+              <div class="thumb-content meds-thumb">
+                <div class="tt-bar"></div>
+                <div class="tt-line"></div>
+                <div class="tt-row-3"><div class="tt-item"></div><div class="tt-item"></div></div>
+                <div class="tt-line"></div>
+                <div class="tt-row-3"><div class="tt-item"></div></div>
+                <div class="tt-nav"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-connector">→</div>
+          <div class="screen-thumb">
+            <div class="thumb-label">4. Appointments</div>
+            <div class="thumb-box">
+              <div class="thumb-content appt-thumb">
+                <div class="tt-bar"></div>
+                <div class="tt-cal"></div>
+                <div class="tt-card big"></div>
+                <div class="tt-card"></div>
+                <div class="tt-nav"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-connector">→</div>
+          <div class="screen-thumb">
+            <div class="thumb-label">5. Chat</div>
+            <div class="thumb-box">
+              <div class="thumb-content chat-thumb">
+                <div class="tt-bar"></div>
+                <div class="tt-bubble left"></div>
+                <div class="tt-bubble right"></div>
+                <div class="tt-bubble left"></div>
+                <div class="tt-input"></div>
+                <div class="tt-nav"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USABILITY TESTING ============ -->
+<section id="usability" class="section">
+  <div class="container">
+    <div class="section-label">07</div>
+    <h2>Usability Testing</h2>
+    <p class="section-intro">A structured usability testing plan was developed to validate the design and identify friction points before development.</p>
+
+    <div class="usability-grid">
+      <div class="usability-card">
+        <h3>Testing Goals</h3>
+        <ol>
+          <li>Validate that users can find and confirm their medications within <strong>10 seconds</strong></li>
+          <li>Confirm that the appointment flow is intuitive for both tech-savvy and elderly users</li>
+          <li>Test whether the messaging feature is discoverable without instruction</li>
+          <li>Measure overall task completion rate and time-on-task for core flows</li>
+        </ol>
+      </div>
+
+      <div class="usability-card">
+        <h3>Participants</h3>
+        <p><strong>5 participants</strong> (following Nielsen's recommendation for identifying ~85% of usability issues):</p>
+        <ul>
+          <li>2 participants aged 55+ managing chronic conditions</li>
+          <li>2 participants aged 25–40 managing chronic conditions</li>
+          <li>1 caregiver who manages medications for a family member</li>
+        </ul>
+      </div>
+
+      <div class="usability-card">
+        <h3>User Tasks</h3>
+        <div class="task-list">
+          <div class="task-item">
+            <span class="task-num">T1</span>
+            <div>
+              <strong>Morning Medication Check-In</strong>
+              <p>"You just took your morning medications. Find them in the app and mark them as taken."</p>
+            </div>
+          </div>
+          <div class="task-item">
+            <span class="task-num">T2</span>
+            <div>
+              <strong>Review Upcoming Appointment</strong>
+              <p>"You have a doctor's appointment today. Find the details and get directions to the clinic."</p>
+            </div>
+          </div>
+          <div class="task-item">
+            <span class="task-num">T3</span>
+            <div>
+              <strong>Message Your Doctor</strong>
+              <p>"You want to ask your doctor about a side effect. Find the messaging feature and send a message."</p>
+            </div>
+          </div>
+          <div class="task-item">
+            <span class="task-num">T4</span>
+            <div>
+              <strong>Check Adherence Progress</strong>
+              <p>"You want to see how well you've been taking your medications this week. Find your progress."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="usability-card">
+        <h3>Data Collection Methods</h3>
+        <ul>
+          <li><strong>Think-Aloud Protocol:</strong> Participants verbalize their thoughts while performing tasks</li>
+          <li><strong>Screen Recording:</strong> Record all interactions via Maze for replay analysis</li>
+          <li><strong>Task Completion Rate:</strong> Binary success/fail per task</li>
+          <li><strong>Time-on-Task:</strong> Measure seconds to complete each task</li>
+          <li><strong>SUS (System Usability Scale):</strong> Post-test questionnaire (10-item, Likert scale)</li>
+          <li><strong>Post-Task Questions:</strong> "What was confusing?", "What would you change?"</li>
+        </ul>
+      </div>
+
+      <div class="usability-card full-width">
+        <h3>Key Feedback & Iterations</h3>
+        <p>Based on initial feedback from 3 pilot test sessions with colleagues, the following changes were made:</p>
+        <div class="feedback-grid">
+          <div class="feedback-item">
+            <div class="feedback-before">
+              <h4>Before</h4>
+              <p>Medication confirmation required navigating to a separate screen</p>
+            </div>
+            <div class="feedback-arrow">→</div>
+            <div class="feedback-after">
+              <h4>After</h4>
+              <p>One-tap confirmation directly from the home dashboard notification</p>
+            </div>
+          </div>
+          <div class="feedback-item">
+            <div class="feedback-before">
+              <h4>Before</h4>
+              <p>Messaging icon was a generic speech bubble — 2/3 users tried the phone icon first</p>
+            </div>
+            <div class="feedback-arrow">→</div>
+            <div class="feedback-after">
+              <h4>After</h4>
+              <p>Changed to labeled "Chat" tab with provider avatars visible in the message list</p>
+            </div>
+          </div>
+          <div class="feedback-item">
+            <div class="feedback-before">
+              <h4>Before</h4>
+              <p>Appointment card showed only date and doctor name</p>
+            </div>
+            <div class="feedback-arrow">→</div>
+            <div class="feedback-after">
+              <h4>After</h4>
+              <p>Added clinic address, directions button, and "what to bring" checklist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="usability-card full-width">
+        <h3>Analysis Approach</h3>
+        <p>Feedback would be analyzed using <strong>affinity mapping</strong> — grouping observations into themes (navigation issues, labeling confusion, feature requests). Each issue would be rated by <strong>severity</strong> (critical, major, minor, cosmetic) using the Nielsen Severity Rating Scale. Critical and major issues would be addressed in the next design iteration before handoff to development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFLECTION ============ -->
+<section id="reflection" class="section alt-bg">
+  <div class="container">
+    <div class="section-label">08</div>
+    <h2>Reflection</h2>
+
+    <div class="reflection-content">
+      <div class="reflection-block">
+        <h3>How UX Design Identified User Needs</h3>
+        <p>The UX design process — starting from research through to prototyping — fundamentally shifted my understanding of what chronic condition patients actually need versus what I assumed they needed. My initial assumption was that the app should be feature-rich with detailed health analytics. But user interviews revealed the opposite: <strong>simplicity and reliability were valued far more than feature density</strong>.</p>
+        <p>Sarah, our primary persona, didn't want charts and graphs — she wanted to know "what do I take next?" and "when is my appointment?" The journey mapping exercise was especially valuable because it exposed the <strong>emotional dimension</strong> of health management. Anxiety before appointments, guilt about missed doses, and the relief of having everything in one place — these emotional states directly informed design decisions like the calming color palette, the positive reinforcement streak counter, and the pre-appointment checklist.</p>
+      </div>
+
+      <div class="reflection-block">
+        <h3>Challenges Encountered</h3>
+        <div class="challenge-list">
+          <div class="challenge">
+            <h4>Balancing Two Distinct User Segments</h4>
+            <p>Sarah (62, low-tech) and James (34, power user) have fundamentally different expectations. Designing for accessibility without making the app feel "dumbed down" for younger users required careful decisions about progressive disclosure — showing essential information upfront with detailed data one tap away.</p>
+          </div>
+          <div class="challenge">
+            <h4>Avoiding Feature Creep</h4>
+            <p>Research uncovered many desired features (symptom journaling, pharmacy integration, insurance tracking). The temptation to include everything would have created the same fragmented experience we were trying to solve. I applied the <strong>MoSCoW prioritization framework</strong> to keep the MVP focused on medications, appointments, and messaging.</p>
+          </div>
+          <div class="challenge">
+            <h4>Making Healthcare Communication Feel Safe</h4>
+            <p>The messaging feature raised important UX questions around trust. Users needed visual cues that messages were <strong>secure and actually delivered</strong> — leading to the addition of read receipts, estimated response time, and a "secure" badge on the chat header.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reflection-block">
+        <h3>Key Takeaways</h3>
+        <div class="takeaway-grid">
+          <div class="takeaway">
+            <div class="takeaway-num">01</div>
+            <p><strong>Research before design, always.</strong> Every assumption I had was either incomplete or wrong. The 6 interviews uncovered pain points no amount of competitive analysis would have revealed.</p>
+          </div>
+          <div class="takeaway">
+            <div class="takeaway-num">02</div>
+            <p><strong>Emotion is a design material.</strong> Health apps deal with fear, guilt, and anxiety. Ignoring the emotional layer creates sterile tools people abandon. Acknowledging it creates companions people trust.</p>
+          </div>
+          <div class="takeaway">
+            <div class="takeaway-num">03</div>
+            <p><strong>Iterate relentlessly.</strong> The paper sketches (Iteration 1) were significantly different from the final high-fidelity mockups. Each round of feedback — even informal — improved clarity and usability.</p>
+          </div>
+          <div class="takeaway">
+            <div class="takeaway-num">04</div>
+            <p><strong>Accessibility is not an afterthought.</strong> Designing for a 62-year-old with reading difficulties from the start made the app better for everyone — larger touch targets, clearer hierarchy, and simpler flows benefit all users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <p class="footer-title">MedCompanion — UX/UI Case Study</p>
+      <p>SOEN 357: Understanding Users · Concordia University · Winter 2026</p>
+      <p>Designed & Developed by Yahya Mounadi</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
